@@ -1,0 +1,67 @@
+.main {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1, h4 {
+    margin-top: 2%;
+    margin-bottom: 2%;   
+}
+
+.start {
+    height: 10%;
+    width: 20%;
+    padding-top: 5px;
+    padding-bottom: 5px;;
+}
+
+.timer {
+    font-size: 66px;
+}
+
+.mainGame {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.game {
+    
+    text-align: center;
+}
+
+.problem {
+    font-size: 48px;
+}
+
+input {
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    border-radius: 20px;
+    display: block;
+    margin: 5px auto;
+    color: white;
+}
+
+.start {
+    background-color: green;
+}
+
+.submit {
+    background-color: blue;
+}
+
+.next {
+    background-color: blue;
+}
+
+.reset {
+    background-color: red;
+}
+
+.pause {
+    background-color: blue;
+}
