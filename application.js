@@ -36,8 +36,20 @@ let generateProblem = function () {
 //Function for timer
 let startTimer = function () {
     if(seconds > 0) {
-        $('.timer').text(seconds);
-        seconds -= 1;
+        if(seconds >= 7) {
+            $('.timer').text(seconds);
+            seconds -= 1;
+            $('.mainGame').css('background-color', "green");
+        } else if(seconds >=4) {
+            $('.timer').text(seconds);
+            seconds -= 1;
+            $('.mainGame').css('background-color', "yellow");
+        } else {
+            $('.timer').text(seconds);
+            seconds -= 1;
+            $('.mainGame').css('background-color', "red");
+        }
+
     } else {
         $('.timer').text("0");
         timerStop();
@@ -50,6 +62,18 @@ let startTimer = function () {
 
 //Button to Answer Question
 $(document).on('click', ".submit", function () {
+    submitAnswer();
+});
+
+//Using Enter Key instead of Submit Button
+$('.answer').keydown(function (e) {
+    if(e.which == 13) {
+       $('.submit').trigger('click');
+    };
+});
+
+//Function for Answering Question
+ let submitAnswer = function () {
     let mathAnswer = $('#answer').val();
     let realAnswer = $('.problem').attr("id");
     $('#answer').val('');
@@ -61,10 +85,8 @@ $(document).on('click', ".submit", function () {
         timerStop();
         $('#submit').attr('class', "pause");
         $('.answerSection').append("<h3 class='bad'>Uh Oh! Incorrect Answer</h3><button class='reset'>Reset</button>");
-
     };
-
-});
+};
 
 //generate wins
 let winsCounter = function () {
@@ -98,5 +120,6 @@ $(document).on('click', '.reset', function () {
     $('.game').append("<h3 class='problem' id=''></h3>");
     seconds = 10;
     wins = 0;
+    $('#answer').val('');
     $('.wins').text("Good Luck!");
 });

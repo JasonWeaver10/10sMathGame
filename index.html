@@ -19,11 +19,15 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="main">
-            <h1>How Far Can You Get in 10 seconds?</h1>
-            <h4>Welcome to the 10s Math game. The rules are simple, press start to begin, and you will have 10s to answer as many math questions as you can. Get one wrong, however, and you lose. For every correct answer, 1s will be added to your time. Choose the maximum number used in math problems below.</h4>
-            <label>Max Number</label>
-            <input type="number" class="maxNumber" value="10">
-            <h3 class="wins">Good Luck!</h3>
+            <div class="heading">
+                <h1 class="title">How Far Can You Get in 10 seconds?</h1>
+                <h4 class="info">Welcome to the 10s Math game. The rules are simple, press start to begin, and you will have 10s to answer as many math questions as you can. Get one wrong, however, and you lose. For every correct answer, 1s will be added to your time. Choose the maximum number used in math problems below.</h4>
+            </div>
+            <div class="wincounter">
+                <label>Max Number Used</label>
+                <input type="number" class="maxNumber" value="10">
+                <h3 class="wins">Good Luck!</h3>
+            </div>
             <div class="mainGame">
                 <button class="start">
                     Start
@@ -37,7 +41,7 @@
             </div>
             <div class="answerSection">
                 <label for="answer">Answer</label>
-                <input id="answer" type="number"></input>
+                <input id="answer" class="answer" type="number"></input>
                 <button class="submit" id="submit">Submit</button>
             </div>
 
